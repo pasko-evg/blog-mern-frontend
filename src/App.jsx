@@ -1,12 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Container from "@mui/material/Container";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Container from '@mui/material/Container';
 
-import { Header } from "./components";
-import { Home, FullPost, Registration, AddPost, Login } from "./pages";
+import { Header } from './components';
+import { Home, FullPost, Registration, AddPost, Login } from './pages';
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <Container maxWidth="lg">
         <Routes>
@@ -15,9 +16,9 @@ function App() {
           <Route path="/add-post" element={<AddPost />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-        </Routes>s
+        </Routes>
       </Container>
-    </>
+    </React.Fragment>
   );
 }
 
